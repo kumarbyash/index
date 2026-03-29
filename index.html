@@ -79,7 +79,7 @@ body {
 <h2>Byash ❤️ Mona ❤️ Byom</h2>
 
 <!-- Romantic slideshow (NO upload needed) -->
-<img id="slide" class="slide" src="https://source.unsplash.com/400x300/?love,romantic">
+<img id="slide" class="slide" src="https://picsum.photos/400/300?random=1">
 
 <div class="baby">👶💖</div>
 
@@ -104,8 +104,11 @@ You are my heart, my soul, my everything ❤️
 
 /* Auto change romantic images */
 setInterval(()=>{
+  let count = 1;
+setInterval(()=>{
+  count++;
   document.getElementById("slide").src =
-  "https://source.unsplash.com/400x300/?love,couple,"+Math.random();
+  "https://picsum.photos/400/300?random=" + count;
 },2000);
 
 /* YES click */
