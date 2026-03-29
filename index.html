@@ -30,30 +30,39 @@ body {
 
 /* Card */
 .card {
-  background: rgba(0,0,0,0.4);
-  padding: 40px;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
   border-radius: 20px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  max-width: 400px;
+}
+
+/* Image */
+.photo {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 32px;
 }
 
 p {
-  font-size: 18px;
-  margin: 6px 0;
+  font-size: 16px;
+  margin: 5px 0;
 }
 
 /* Buttons */
 .btn {
   margin: 10px;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -68,11 +77,11 @@ p {
   position: absolute;
 }
 
-/* Success message */
+/* Success */
 #success {
   display: none;
-  font-size: 28px;
-  margin-top: 20px;
+  font-size: 24px;
+  margin-top: 15px;
 }
 </style>
 </head>
@@ -93,20 +102,25 @@ for(let i=0;i<25;i++){
 </script>
 
 <div class="card">
+
+  <!-- 👇 IMPORTANT: Upload your image in repo and keep same name -->
+  <img src="photo.jpg" class="photo">
+
   <h1>Byash ❤️ Mona</h1>
 
-  <!-- English Shayari -->
-  <p>In every heartbeat, I find your name, Mona 💖</p>
-  <p>In every dream, it's always you I see 🌙</p>
-  <p>My world begins with you, Byash ❤️ Mona</p>
-  <p>And forever is exactly where I want us to be 💫</p>
+  <!-- Romantic Shayari -->
+  <p>Every moment with you feels like a beautiful dream ✨</p>
+  <p>Your smile is my peace, your love is my life 💖</p>
+  <p>Byash ❤️ Mona — a story written by destiny</p>
+  <p>And I promise to love you endlessly 💫</p>
 
-  <p style="margin-top:15px;">Will you always be mine? 💍</p>
+  <p style="margin-top:10px;">Will you always be mine? 💍</p>
 
   <button class="btn yes" onclick="acceptLove()">YES 💖</button>
   <button class="btn no" id="noBtn" onmouseover="moveNo()">NO 😜</button>
 
   <div id="success">I knew it 😍 Love you forever Mona 💖💍</div>
+
 </div>
 
 <script>
