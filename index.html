@@ -18,16 +18,6 @@ body {
   color: white;
 }
 
-/* Floating Hearts */
-.heart {
-  position: absolute;
-  animation: float 6s linear infinite;
-}
-@keyframes float {
-  0% { transform: translateY(100vh); opacity: 1; }
-  100% { transform: translateY(-10vh); opacity: 0; }
-}
-
 /* Card */
 .card {
   background: rgba(0,0,0,0.4);
@@ -43,7 +33,8 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 8px 0;
 }
 
 /* Buttons */
@@ -64,43 +55,34 @@ p {
 .no {
   background: #ff1744;
   color: white;
-  position: absolute;
 }
 
-/* Success Message */
+/* Message */
 #success {
   display: none;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 20px;
-  color: #fff;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Floating hearts -->
-<script>
-for(let i=0;i<25;i++){
-  let heart=document.createElement("div");
-  heart.className="heart";
-  heart.innerHTML="❤️";
-  heart.style.left=Math.random()*100+"vw";
-  heart.style.fontSize=(Math.random()*20+10)+"px";
-  heart.style.animationDuration=(Math.random()*3+3)+"s";
-  document.body.appendChild(heart);
-}
-</script>
-
 <div class="card">
   <h1>Byash ❤️ Mona</h1>
-  <p>My love for you grows stronger every day 💖</p>
-  <p>Will you always be mine? 💍</p>
+
+  <!-- Shayari -->
+  <p>तुमसे ही शुरू मेरी हर सुबह होती है 💖</p>
+  <p>तुमसे ही मेरी हर रात पूरी होती है 🌙</p>
+  <p>तुम हो तो ये दुनिया अपनी लगती है ❤️</p>
+  <p>वरना सब कुछ अधूरा सा लगता है… 💫</p>
+
+  <p style="margin-top:15px;">Will you always be mine? 💍</p>
 
   <button class="btn yes" onclick="acceptLove()">YES 💖</button>
-  <button class="btn no" id="noBtn" onmouseover="moveNo()">NO 😜</button>
+  <button class="btn no" onclick="noClick()">NO 😜</button>
 
-  <div id="success">Yayyy! ❤️ I Love You Mona 😍💍</div>
+  <div id="success">Hehehe 😍 I knew it! Love You Mona 💖💍</div>
 </div>
 
 <script>
@@ -108,11 +90,10 @@ function acceptLove() {
   document.getElementById("success").style.display = "block";
 }
 
-/* NO button runs away 😂 */
-function moveNo() {
-  let btn = document.getElementById("noBtn");
-  btn.style.top = Math.random() * 80 + "%";
-  btn.style.left = Math.random() * 80 + "%";
+/* NO button trap 😆 */
+function noClick() {
+  alert("NO option disabled 😜 Only YES allowed ❤️");
+  acceptLove();
 }
 </script>
 
