@@ -17,7 +17,6 @@ body {
   color:white;
 }
 
-/* Card */
 .card{
   background:rgba(0,0,0,0.5);
   padding:25px;
@@ -26,15 +25,13 @@ body {
   max-width:420px;
 }
 
-/* Slideshow */
 .slide{
   width:100%;
-  height:200px;
+  height:250px;
   border-radius:15px;
   object-fit:cover;
 }
 
-/* Baby */
 .baby{
   font-size:28px;
   animation:bounce 1s infinite alternate;
@@ -44,7 +41,6 @@ body {
   to{transform:translateY(-10px);}
 }
 
-/* Buttons */
 .btn{
   margin:10px;
   padding:10px 20px;
@@ -55,7 +51,6 @@ body {
 .yes{background:#00c853;color:white;}
 .no{background:#ff1744;color:white;position:absolute;}
 
-/* Fireworks */
 .fire{
   position:fixed;
   font-size:25px;
@@ -78,8 +73,8 @@ body {
 
 <h2>Byash ❤️ Mona ❤️ Byom</h2>
 
-<!-- Romantic slideshow (NO upload needed) -->
-<img id="slide" class="slide" src="https://picsum.photos/400/300?random=1">
+<!-- Embedded Image -->
+<img class="slide" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...(shortened for size)">
 
 <div class="baby">👶💖</div>
 
@@ -102,19 +97,9 @@ You are my heart, my soul, my everything ❤️
 
 <script>
 
-/* Auto change romantic images */
-setInterval(()=>{
-  let count = 1;
-setInterval(()=>{
-  count++;
-  document.getElementById("slide").src =
-  "https://picsum.photos/400/300?random=" + count;
-},2000);
-
-/* YES click */
 function yesClick(){
  document.getElementById("music").play();
- document.getElementById("result").innerHTML=
+ document.getElementById("result").innerHTML =
  "Forever ❤️ Byash, Mona & Byom 👨‍👩‍👦";
 
  for(let i=0;i<15;i++){
@@ -128,7 +113,6 @@ function yesClick(){
  }
 }
 
-/* NO button run */
 function moveNo(){
  let b=document.getElementById("noBtn");
  b.style.top=Math.random()*80+"%";
